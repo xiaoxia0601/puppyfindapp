@@ -1,0 +1,266 @@
+// Puppy navbar
+@puppy-light-bg: #FFF6F7;
+@puppy-bg: #FFDAE0;
+@puppy-border: #4484ce;
+
+@puppy-color: #FF00A7;
+
+@puppy-title-color: #202121;
+@puppy-title-hover-color: 0.8 * @puppy-title-color + 0.2 * white;
+
+@puppy-link-color: @puppy-color;
+
+@puppy-link-hover-color: 0.5 * @puppy-color + 0.5 * @puppy-bg;
+@puppy-link-hover-bg: 0.05 * @puppy-color + 0.95 * @puppy-bg;
+
+@puppy-link-active-color: 0.5 * @puppy-color + 0.5 * @puppy-bg;
+@puppy-link-active-bg: @puppy-bg;
+
+@puppy-link-disabled-color: purple;
+@puppy-link-disabled-bg: purple;
+
+
+body {
+  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+  color: @puppy-title-color;
+  background-color: @puppy-light-bg !important;
+}
+
+
+
+
+#myCarousel {
+  width: 100%;
+  margin: auto;
+  
+  .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+      margin: auto;
+  }
+
+  .carousel-control { visibility: hidden; }
+  &:hover .carousel-control { visibility: visible; }
+}
+
+
+#faq, #contact {
+  h2 {
+    text-align: center;
+    color: @puppy-color;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .faq_q {
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    padding: 10px 25px;
+
+    &:hover, &:focus {
+      background-color: @puppy-bg;
+    }
+  }
+
+  .faq_a {
+    padding: 0px 25px;
+    display: none;
+  }
+}
+
+.sub-title h2 {
+  text-align: center;
+}
+
+.puppy-row {
+  margin-bottom: 50px;
+
+  .puppy-name {
+    font-size: 18pt;
+    margin: 0px 0px 10px 25px;
+    color: @puppy-title-color;
+
+    &:hover,
+    &:focus {
+      color: @puppy-title-hover-color;
+      text-decoration: none;
+    }
+  }
+
+  .puppy-info {
+    display: none;
+
+    > ul > li:last-child {
+      list-style: none;
+      margin: 15px 0px 0px -15px;
+    }
+  }
+}
+
+
+.fancy-font {
+  font-family: 'Crimson Text';
+  font-style: italic;
+}
+
+.navbar-puppy {
+  padding: 10px 0px 10px 0px;
+  background-color: @puppy-bg;
+  border-color: @puppy-border;
+  font-size: 18pt;
+
+  .navbar-text {
+    color: @puppy-color;
+  }
+
+ 
+  .navbar-nav {
+    > li > a {
+      color: @puppy-link-color;
+      display: inline-block;
+
+      &:hover,
+      &:focus {
+        color: @puppy-link-hover-color;
+        background-color: @puppy-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @puppy-link-active-color;
+        background-color: @puppy-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @puppy-link-disabled-color;
+        background-color: @puppy-link-disabled-bg;
+      }
+    }
+  }
+
+  .navbar-right {
+    font-size: 12pt;
+    li > a {
+      margin-left: 5px;
+    }
+  }
+
+  .navbar-center {
+    li > a {
+      margin: auto 20px;
+    }
+  }
+
+  .navbar-brand {
+    padding: 0px;
+    margin-left: 100px;
+    
+    > img {
+      height: 100%;
+      padding: 5px;
+      width: auto;
+    } 
+  }
+
+  .user-link {
+    display: none;
+  }
+}
+
+#cinema {
+  .videowrapper {
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+  }
+  .videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }  
+}
+
+
+.footer {
+  background-color: @puppy-bg;
+  color: @puppy-color;
+  padding: 30px 0px 30px 0px;
+  font-size: 12pt;
+  margin-top: 80px;
+
+  ul {
+    list-style-type: none;
+    width: 50%;
+    margin: auto;
+
+    li {
+      display: inline-block;
+
+      a {
+        color: @puppy-link-color;
+        
+        &:hover, &:focus {
+          color: @puppy-link-hover-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .divider {
+    padding: 0px 10px 0px 10px;
+  }
+}	
+
+.submit-btn {
+    margin: 50px auto 50px auto;
+}	
+
+#signUpLink {
+    margin: 50px auto 50px auto;
+}
+
+.btn-reserve {
+  background-color: #FC6E97;
+  color: white;
+  margin: 50px auto;
+
+  &:hover, &:focus {
+    color: @puppy-bg !important; 
+  }
+}
+
+ #doginf {
+  border-collapse: collapse;
+  width: 30%;
+
+  td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #FC6E97;
+    color: white;
+  }
+
+  tr {
+    &:nth-child(even) {background-color: #f2f2f2;}
+    &:hover {background-color: #ddd;}
+  }
+  
+}

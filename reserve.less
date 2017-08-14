@@ -1,0 +1,316 @@
+@xiaoyu-pink: #F08080;
+@pending-grey: #AAA;
+@puppy-title-color: #202121; 
+
+img{
+	max-width: 100%;
+}
+
+#maincontent {
+	width:90%;
+	margin:20px auto;
+	font-size: 14px !important;
+	color: @puppy-title-color;
+
+	.column {
+		overflow: auto;
+		padding: 5% 1%;
+		border-radius:20px;
+		box-shadow: 10px 10px 5px #888888;
+		background-color: white;
+	}
+
+	.step {
+		width: 100%;
+		height: auto;
+		color: @xiaoyu-pink;
+		padding-left: 1%;
+		padding-top: 20px;
+		float: left;
+		position: relative;
+
+		.number, .title {
+			display: inline;
+			vertical-align: bottom;
+		}
+		
+		.number{
+			width:35px;
+			height:35px;
+			background:@xiaoyu-pink;
+			color:#FFF;
+			font-size:24px;
+			text-align: center;
+			border-radius:50%;
+			float:left;
+			margin-left:10px;
+			margin-top: 12px;
+		}
+
+		.title{
+			float:left;
+			width:70%;
+			margin-left:3%;
+			font-size:1.2em;
+			font-weight:200;
+			margin-top:-5px;
+
+			h3{
+				font-weight:200;
+				padding-bottom: 3px;
+				border-bottom: 3px solid @xiaoyu-pink;
+			}
+
+			/*&:after{
+				content:'';
+				width:100%;
+				height:3px;
+				background:@xiaoyu-pink;
+				position:absolute;
+				bottom:0;
+				right:0;
+				border-top-left-radius:10px;
+				border-bottom-left-radius:10px;
+			}*/
+		}	
+	}
+}
+
+
+.content{
+	padding:5px 28px 28px 28px;
+	width:100%;
+	margin:0 auto;
+	height:auto;
+	display:block;
+	float:left;
+
+	input, .select {
+		width:100%;
+		border:1px solid #ccc;	
+		border-radius:3px;
+		display: inline-block;		
+		margin-bottom: 5px;
+		padding:5px 10px;
+	}
+
+
+	.select{
+		overflow: hidden;
+		margin-bottom: 0px;
+	}
+
+	select{
+		background: transparent;
+		display:inline-block;
+		width:100%;
+		border: 0px none white;
+	}
+
+	button{
+		background-color: @xiaoyu-pink;
+		color:#FFF;
+		margin:5px auto;
+		width:75%;
+
+		&:hover, &:focus {
+			background-color: @xiaoyu-pink * 0.8 + #FFDAE0 * 0.2;
+			color: #FFDAE0;
+		}
+	}
+}
+
+.secured {
+	margin-top:5px;
+	padding-left:1em;
+	padding-right:1em;
+
+	.lock{
+		float:left;
+		padding:3px;
+		width:15%;
+		margin-top:10px;
+	}
+
+	.security_info {
+		float:left;
+		margin-left:15px;
+		font-style: italic;
+		width:50%;
+	}
+}
+
+.sub{
+	font-size: 10px;
+	color: @pending-grey;
+	display: block;
+	text-align: center;
+	width: 75%;
+	margin: 15px auto;
+}
+
+
+#email{
+border-bottom:1px dotted #ccc;
+padding-bottom:1em;
+}
+
+
+
+
+#address .state_options label,
+#address .country_options label.country{
+right: 0;
+margin-right: 0;
+width: 40%;
+top:5px;
+bottom:3px;
+background:@xiaoyu-pink;
+color: white;
+font-size: 1em;
+padding: 4px 6px;
+z-index: 2;
+text-transform: uppercase;
+}
+
+#address input[type="checkbox"]{
+width:10%;
+float:left;
+}
+
+#address label.same,
+#shipping input[type="radio"],
+#shipping input[type="radio"]:focus{
+width:30px;
+}
+
+#shipping label{
+padding:0;
+font-size:1.5em;
+color:@pending-grey;
+}
+
+#shipping.price{
+display:inline-block;
+}
+
+#payment label.exp_date{
+  right: 0;
+margin-right: 0;
+width: 40%;
+top:7px;
+bottom:3px;
+background:@xiaoyu-pink;
+color: white;
+font-size: 1em;
+padding: 4px 6px;
+z-index: 2;
+text-transform: uppercase;
+}
+
+.left{
+	width:100%;
+	float:left;
+}
+.accepted{
+	width:100%;
+	padding-right:1em;
+	padding-left:1em;
+	margin-top:30px;
+}
+	.accepted span{
+	display: table-cell;
+	padding:3px;
+}
+
+#ordered, #reviewed {
+	color: @pending-grey;
+	font-size: 18px;
+
+	.products, .totals, .final, .billing, .payment {
+		width:100%;
+		float:left;
+		margin-top: 10px;
+		padding-bottom:13px;
+		border-bottom:3px solid @pending-grey;
+	}
+
+	.final, .billing, .payment {
+		color: @puppy-title-color;
+	}
+
+	.product_image {
+		width:80%;
+		float:left;
+		margin-left: 10%;
+	}
+
+	.product_details {
+		clear: left;
+	}
+	
+	.item {
+		clear: left;
+		margin: auto 5%;
+		.price {
+			float: right;
+			font-size: italic;
+			text-align: right;
+		}
+	}
+
+}
+
+
+/*
+
+#reviewed .title{
+	width:49%;
+	font-size:1.8em;
+	float:left;
+}
+#reviewed .billing{
+	width:100%;
+	float:left;
+	margin-bottom:5px;
+	margin-top:20px;
+}
+#reviewed .billing .address_reviewed,
+#reviewed .shipping .address_reviewed,
+#reviewed .payment .payment_reviewed{
+	color:@pending-grey;
+	font-size:1.2em;
+	height:80px;
+	width:48%;
+	float:left;
+}
+#reviewed .billing .address_reviewed span{
+	display:block;
+}
+span.method{
+	display:block;
+}
+#reviewed #complete{
+	float:left;
+	width:100%;
+	padding-top:5px;
+	border-top:1px dotted @pending-grey;
+}
+#reviewed .big_button{
+	clear:both;
+	display:block;
+	width:70%;
+	margin:0 auto;
+	padding-top:15px;
+	padding-bottom:10px;
+	color:#fff;
+	font-size:2em;
+	text-decoration: none;
+	background:@xiaoyu-pink;
+	text-align:center;
+	border-bottom: 3px solid @xiaoyu-pink;
+	border-radius: 2px;
+	margin-bottom:20px;
+	margin-top:20px;
+}
+*/
