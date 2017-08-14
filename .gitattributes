@@ -1,1 +1,3 @@
-*.css linguist-language=php
+*.css linguist-language = php
+*.less linguist-language = php
+
